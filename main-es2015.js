@@ -347,17 +347,30 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class ProfileCardComponent {
-    constructor() { }
+    constructor() {
+        this.niceimage = "./../../assets/kalyan.jpg";
+        this.blurimage = "./../../assets/kalyanBlur.jpg";
+        this.image = "";
+        this.image = this.niceimage;
+    }
     ngOnInit() {
+    }
+    changepic() {
+        this.image = this.blurimage;
+    }
+    reversepic() {
+        this.image = this.niceimage;
     }
 }
 ProfileCardComponent.ɵfac = function ProfileCardComponent_Factory(t) { return new (t || ProfileCardComponent)(); };
-ProfileCardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ProfileCardComponent, selectors: [["app-profile-card"]], decls: 21, vars: 0, consts: [[1, "card", "rounded", "mt-5", "ml-3"], [1, "card-body"], [1, "profile", "text-center"], [1, "profile-logo", "p-4"], ["src", "./../../assets/kalyan.jpg", 1, "card-img-top"], [1, "profile-name"], [1, "role"], [1, "icons"], [1, "fa", "fa-linkedin"], [1, "fa", "fa-github"], [1, "fa", "fa-code"], [1, "card-footer"], [1, "download-resume", "p-4"], [1, "download-resume-button", "btn", "btn-block"]], template: function ProfileCardComponent_Template(rf, ctx) { if (rf & 1) {
+ProfileCardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ProfileCardComponent, selectors: [["app-profile-card"]], decls: 24, vars: 1, consts: [[1, "card", "rounded", "mt-5", "ml-3"], [1, "card-body"], [1, "profile", "text-center"], [1, "profile-logo", "p-4"], [1, "w3-animate-zoom", "card-img-top", 3, "src", "mouseover", "mouseout"], [1, "profile-name"], [1, "role"], [1, "icons"], ["href", "https://www.linkedin.com/in/mvkkr5/", "target", "blank"], [1, "fa", "fa-linkedin"], ["href", "https://github.com/kalyan555", "target", "blank"], [1, "fa", "fa-github"], ["href", "https://www.hackerrank.com/absolute_coder?hr_r=1", "target", "blank"], [1, "fa", "fa-code"], [1, "card-footer"], [1, "download-resume", "p-4"], ["href", "../../assets/kalyan_reddy_resume.pdf", "download", "", 1, "download-resume-button", "btn", "btn-block"]], template: function ProfileCardComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "img", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "img", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("mouseover", function ProfileCardComponent_Template_img_mouseover_4_listener() { return ctx.changepic(); })("mouseout", function ProfileCardComponent_Template_img_mouseout_4_listener() { return ctx.reversepic(); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "h4");
@@ -373,21 +386,30 @@ ProfileCardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdef
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "i", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "a", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "i", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "i", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "a", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "i", 11);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "button", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "Download CV");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "a", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "i", 13);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    } }, styles: [".download-resume-button[_ngcontent-%COMP%]{\r\n    border-radius: 30px;\r\n    width: 90%;\r\n    margin: auto;\r\n    padding:13px;\r\n    background-color: #101010;\r\n    color:white\r\n}\r\n\r\n.download-resume-button[_ngcontent-%COMP%]:hover{\r\n    box-shadow: 1px 4px 8px 1px rgba(0,0,0, 0.2), 1px 6px 20px 1px rgba(0,0,0, 0.19);\r\n    \r\n}\r\n\r\n.profile-logo[_ngcontent-%COMP%]   img[_ngcontent-%COMP%]{\r\n    border-radius: 50%\r\n}\r\n\r\n.card-body[_ngcontent-%COMP%]{\r\n    background: #1089ff;\r\n    color:white;\r\n    \r\n    border-top-left-radius: 5px;\r\n    border-top-right-radius: 5px;    \r\n}\r\n\r\n.card-footer[_ngcontent-%COMP%]{\r\n    background: #313C42;\r\n    border-bottom-left-radius: 5px;\r\n    border-bottom-right-radius: 5px;  \r\n}\r\n\r\n.card[_ngcontent-%COMP%]{\r\n    border: 0px;\r\n    background-color: inherit;\r\n    box-shadow: 1px 4px 8px 1px rgba(16, 137, 255, 0.19), 1px 6px 20px 1px rgba(16, 137, 255, 0.19);\r\n}\r\n\r\n.icons[_ngcontent-%COMP%]   i[_ngcontent-%COMP%]{\r\n    margin: 10px 10px 5px 10px;\r\n    font-size: 20px\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvZmlsZS1jYXJkL3Byb2ZpbGUtY2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksbUJBQW1CO0lBQ25CLFVBQVU7SUFDVixZQUFZO0lBQ1osWUFBWTtJQUNaLHlCQUF5QjtJQUN6QjtBQUNKOztBQUVBO0lBQ0ksZ0ZBQWdGOztBQUVwRjs7QUFDQTtJQUNJO0FBQ0o7O0FBRUE7SUFDSSxtQkFBbUI7SUFDbkIsV0FBVzs7SUFFWCwyQkFBMkI7SUFDM0IsNEJBQTRCO0FBQ2hDOztBQUVBO0lBQ0ksbUJBQW1CO0lBQ25CLDhCQUE4QjtJQUM5QiwrQkFBK0I7QUFDbkM7O0FBRUE7SUFDSSxXQUFXO0lBQ1gseUJBQXlCO0lBQ3pCLCtGQUErRjtBQUNuRzs7QUFFQTtJQUNJLDBCQUEwQjtJQUMxQjtBQUNKIiwiZmlsZSI6InNyYy9hcHAvcHJvZmlsZS1jYXJkL3Byb2ZpbGUtY2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmRvd25sb2FkLXJlc3VtZS1idXR0b257XHJcbiAgICBib3JkZXItcmFkaXVzOiAzMHB4O1xyXG4gICAgd2lkdGg6IDkwJTtcclxuICAgIG1hcmdpbjogYXV0bztcclxuICAgIHBhZGRpbmc6MTNweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMxMDEwMTA7XHJcbiAgICBjb2xvcjp3aGl0ZVxyXG59XHJcblxyXG4uZG93bmxvYWQtcmVzdW1lLWJ1dHRvbjpob3ZlcntcclxuICAgIGJveC1zaGFkb3c6IDFweCA0cHggOHB4IDFweCByZ2JhKDAsMCwwLCAwLjIpLCAxcHggNnB4IDIwcHggMXB4IHJnYmEoMCwwLDAsIDAuMTkpO1xyXG4gICAgXHJcbn1cclxuLnByb2ZpbGUtbG9nbyBpbWd7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MCVcclxufVxyXG5cclxuLmNhcmQtYm9keXtcclxuICAgIGJhY2tncm91bmQ6ICMxMDg5ZmY7XHJcbiAgICBjb2xvcjp3aGl0ZTtcclxuICAgIFxyXG4gICAgYm9yZGVyLXRvcC1sZWZ0LXJhZGl1czogNXB4O1xyXG4gICAgYm9yZGVyLXRvcC1yaWdodC1yYWRpdXM6IDVweDsgICAgXHJcbn1cclxuXHJcbi5jYXJkLWZvb3RlcntcclxuICAgIGJhY2tncm91bmQ6ICMzMTNDNDI7XHJcbiAgICBib3JkZXItYm90dG9tLWxlZnQtcmFkaXVzOiA1cHg7XHJcbiAgICBib3JkZXItYm90dG9tLXJpZ2h0LXJhZGl1czogNXB4OyAgXHJcbn1cclxuXHJcbi5jYXJke1xyXG4gICAgYm9yZGVyOiAwcHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBpbmhlcml0O1xyXG4gICAgYm94LXNoYWRvdzogMXB4IDRweCA4cHggMXB4IHJnYmEoMTYsIDEzNywgMjU1LCAwLjE5KSwgMXB4IDZweCAyMHB4IDFweCByZ2JhKDE2LCAxMzcsIDI1NSwgMC4xOSk7XHJcbn1cclxuXHJcbi5pY29ucyBpe1xyXG4gICAgbWFyZ2luOiAxMHB4IDEwcHggNXB4IDEwcHg7XHJcbiAgICBmb250LXNpemU6IDIwcHhcclxufSJdfQ== */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "a", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](23, "Download CV");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", ctx.image, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    } }, styles: [".download-resume-button[_ngcontent-%COMP%]{\r\n    border-radius: 30px;\r\n    width: 90%;\r\n    margin: auto;\r\n    padding:13px;\r\n    background-color: #101010;\r\n    color:white\r\n}\r\n\r\n.download-resume-button[_ngcontent-%COMP%]:hover{\r\n    box-shadow: 1px 4px 8px 1px rgba(0,0,0, 0.2), 1px 6px 20px 1px rgba(0,0,0, 0.19);\r\n    \r\n}\r\n\r\na[_ngcontent-%COMP%]{\r\n    color:white\r\n}\r\n\r\n.profile-logo[_ngcontent-%COMP%]   img[_ngcontent-%COMP%]{\r\n    border-radius: 50%\r\n}\r\n\r\n.card-body[_ngcontent-%COMP%]{\r\n    background: #1089ff;\r\n    color:white;\r\n    \r\n    border-top-left-radius: 5px;\r\n    border-top-right-radius: 5px;    \r\n}\r\n\r\n.card-footer[_ngcontent-%COMP%]{\r\n    background: #313C42;\r\n    border-bottom-left-radius: 5px;\r\n    border-bottom-right-radius: 5px;  \r\n}\r\n\r\n.card[_ngcontent-%COMP%]{\r\n    border: 0px;\r\n    background-color: inherit;\r\n    box-shadow: 1px 4px 8px 1px rgba(16, 137, 255, 0.19), 1px 6px 20px 1px rgba(16, 137, 255, 0.19);\r\n}\r\n\r\n.icons[_ngcontent-%COMP%]   i[_ngcontent-%COMP%]{\r\n    margin: 10px 10px 5px 10px;\r\n    font-size: 20px\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvZmlsZS1jYXJkL3Byb2ZpbGUtY2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksbUJBQW1CO0lBQ25CLFVBQVU7SUFDVixZQUFZO0lBQ1osWUFBWTtJQUNaLHlCQUF5QjtJQUN6QjtBQUNKOztBQUVBO0lBQ0ksZ0ZBQWdGOztBQUVwRjs7QUFFQTtJQUNJO0FBQ0o7O0FBQ0E7SUFDSTtBQUNKOztBQUVBO0lBQ0ksbUJBQW1CO0lBQ25CLFdBQVc7O0lBRVgsMkJBQTJCO0lBQzNCLDRCQUE0QjtBQUNoQzs7QUFFQTtJQUNJLG1CQUFtQjtJQUNuQiw4QkFBOEI7SUFDOUIsK0JBQStCO0FBQ25DOztBQUVBO0lBQ0ksV0FBVztJQUNYLHlCQUF5QjtJQUN6QiwrRkFBK0Y7QUFDbkc7O0FBRUE7SUFDSSwwQkFBMEI7SUFDMUI7QUFDSiIsImZpbGUiOiJzcmMvYXBwL3Byb2ZpbGUtY2FyZC9wcm9maWxlLWNhcmQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5kb3dubG9hZC1yZXN1bWUtYnV0dG9ue1xyXG4gICAgYm9yZGVyLXJhZGl1czogMzBweDtcclxuICAgIHdpZHRoOiA5MCU7XHJcbiAgICBtYXJnaW46IGF1dG87XHJcbiAgICBwYWRkaW5nOjEzcHg7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMTAxMDEwO1xyXG4gICAgY29sb3I6d2hpdGVcclxufVxyXG5cclxuLmRvd25sb2FkLXJlc3VtZS1idXR0b246aG92ZXJ7XHJcbiAgICBib3gtc2hhZG93OiAxcHggNHB4IDhweCAxcHggcmdiYSgwLDAsMCwgMC4yKSwgMXB4IDZweCAyMHB4IDFweCByZ2JhKDAsMCwwLCAwLjE5KTtcclxuICAgIFxyXG59XHJcblxyXG5he1xyXG4gICAgY29sb3I6d2hpdGVcclxufVxyXG4ucHJvZmlsZS1sb2dvIGltZ3tcclxuICAgIGJvcmRlci1yYWRpdXM6IDUwJVxyXG59XHJcblxyXG4uY2FyZC1ib2R5e1xyXG4gICAgYmFja2dyb3VuZDogIzEwODlmZjtcclxuICAgIGNvbG9yOndoaXRlO1xyXG4gICAgXHJcbiAgICBib3JkZXItdG9wLWxlZnQtcmFkaXVzOiA1cHg7XHJcbiAgICBib3JkZXItdG9wLXJpZ2h0LXJhZGl1czogNXB4OyAgICBcclxufVxyXG5cclxuLmNhcmQtZm9vdGVye1xyXG4gICAgYmFja2dyb3VuZDogIzMxM0M0MjtcclxuICAgIGJvcmRlci1ib3R0b20tbGVmdC1yYWRpdXM6IDVweDtcclxuICAgIGJvcmRlci1ib3R0b20tcmlnaHQtcmFkaXVzOiA1cHg7ICBcclxufVxyXG5cclxuLmNhcmR7XHJcbiAgICBib3JkZXI6IDBweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IGluaGVyaXQ7XHJcbiAgICBib3gtc2hhZG93OiAxcHggNHB4IDhweCAxcHggcmdiYSgxNiwgMTM3LCAyNTUsIDAuMTkpLCAxcHggNnB4IDIwcHggMXB4IHJnYmEoMTYsIDEzNywgMjU1LCAwLjE5KTtcclxufVxyXG5cclxuLmljb25zIGl7XHJcbiAgICBtYXJnaW46IDEwcHggMTBweCA1cHggMTBweDtcclxuICAgIGZvbnQtc2l6ZTogMjBweFxyXG59Il19 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ProfileCardComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
